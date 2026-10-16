@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>for my babylanglangg ♡</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="login">
+        <h1>hi, baby! ♡</h1>
+        <p>enter your kuan to continue</p>
+        <form id="loginForm">
+            <input type="text" id="username"
+                placeholder="your name" required>
+            <input type="password" id="birthday"
+                placeholder="your birthday" required>
+            <button type="submit">enter ♡</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <div id="welcome">
+        <h1 id="welcomeTitle">nice oneeee, baby! ♡</h1>
+    </div>
+    <div id="loveHeart">
+        <p>iloveyouu iloveyouu iloveyouu</p>
+        <p>iloveyouu iloveyouu iloveyouu</p>
+        <p>iloveyouu iloveyouu</p>
+        <p>iloveyouu</p>
+
+  <button id="continueButton"> click to continue baby</button>
+    </div>
+         <div id="envelopeSection">
+    <h1>mwehehehehehehe mwuaaahh:3♡</h1>
+    <div id="envelope">
+        <p id="envelopeHeart">♡</p>
+        <button id="openLetter" type="button">open ♡</button>
+    </div>
+      <div id="letterPaper">
+            <p class="letterDate">something for you ♡</p>
+            <h2>to my baby,</h2>
+            <p class="letterBody">
+               
+i made this little website just for u (wa pa ni nahuman). i wanted to make something special that could remind u how much u mean to me, even when i cant find the right words to say it. <br> <br>
+jeshin, i'm really glad na i met u. out of all the people i could've met, ikaw jud ang akong nakaila, and i'm genuinely thankful for that. i didn't expect nga someone like u would become this special to me, pero here i am, loving u more than i can explain. <br> <br>
+i know i still have a lot to learn. sometimes, i dont know unsaon pag-express sa akong feelings, and there are times nga lisod para nako i-put into words ang naa sa akong mind. but please know nga everything i feel for u is genuine. i want to understand u better, learn more about u, and love u in ways na ma-feel nimo nga u're appreciated. <br> <br>
+and baby, u don't have to hide the parts of yourself that ure afraid to show me just because ure scared it'll make me love u less. u don't have to rush or pretend to be someone else just to be enough for me. i want to know u at ur own pace. i want u to feel safe with me, i want u to feel safe with me knowing that u can be yourself without worrying that i'll see u differently. <br> <br>
+i know we still have a lot to learn, and maybe not every day will be easy for us. but I want us to keep understanding each other, communicate when things get difficult, and choose to work things out together. i want to grow with u, not just as someone who loves u, but as someone who keeps learning how to love u better. <br> <br>
+thank u for being here, langgaaaa. thank u for being u. i hope this little website reminds u that there's someone who genuinely cares about u, someone who's happy to have u in their life and wants to keep making more memories with u. <br> <br>
+            <p class="letterBody">
+                <!-- WRITE MORE OF YOUR LETTER HERE -->
+                
+                iloveyouuusmmm, babyy. more than this little website could ever explain:3 ♡
+            </p>
+            <p class="letterEnding">
+                with all my love,<br>
+                your baby kikaiii:p♡
+            </p>
+        </div>
+    </div>
+    <script>
+        const correctName = "jeshin";
+        const correctBirthday = "030708";
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("username").value.trim().toLowerCase();
+            const birthday = document.getElementById("birthday").value.trim();
+            if (name === correctName && birthday === correctBirthday) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("welcome").style.display = "block";
+                setTimeout(function() {
+                    document.getElementById("welcome").style.display = "none";
+                    document.getElementById("loveHeart").style.display = "block";
+                }, 3000);
+            } else {
+                document.getElementById("message").textContent =
+                    "oops, try again, baby ♡";
+            }
+        });
+             document.getElementById("continueButton").addEventListener("click", function() {
+            document.getElementById("loveHeart").style.display = "none";
+             const envelope = 
+            document.getElementById("envelopeSection").style.display = "block";
+        });
+             document.getElementById("openLetter").addEventListener("click", function() {
+            document.getElementById("envelope").style.display = "none";
+            document.getElementById("letterPaper").style.display = "block";
+        }); 
+
+    </script>
+</body>
+</html>

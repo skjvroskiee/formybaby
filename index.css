@@ -1,0 +1,237 @@
+body {
+    background: #fff0f6;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #bd5b83;
+    margin: 0;
+    padding: 30px 15px;
+}
+#login, #welcome {
+    background: white;
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #f5bfd4;
+}
+h1 {
+    color: #e75480;
+}
+input {
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 15px auto;
+    border: 1px solid #f2a9c4;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+button {
+    background: #f28bb5;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+button:hover {
+    background: #e75480;
+}
+#message {
+    color: #e75480;
+}
+#welcome {
+    display: none;
+}
+#loveHeart {
+    display: none;
+    width: 100%;
+    max-width: 350px;
+    margin: 70px auto;
+    color: #ff4f91;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    animation: heartBlink 1s infinite alternate;
+}
+#loveHeart p {
+    margin: 0;
+    text-shadow:
+        0 0 5px #ff4f91,
+        0 0 12px #ff80b5,
+        0 0 20px #ffc0d9;
+}
+#loveHeart p:nth-child(2) {
+    letter-spacing: 1px;
+}
+#loveHeart p:nth-child(3) {
+    letter-spacing: 2px;
+}
+@keyframes heartBlink {
+    from {
+        opacity: 0.3;
+        text-shadow: 0 0 5px #ff4f91;
+    }
+    to {
+        opacity: 1;
+        text-shadow:
+            0 0 10px #ff4f91,
+            0 0 25px #ff80b5,
+            0 0 35px #ffc0d9;
+    }
+}
+#continueButton {
+    display: block;
+    margin: 35px auto 0;
+    padding: 12px 22px;
+    background: #ff8fba;
+    color: white;
+    border: 2px solid #ffc0d9;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    anmation: none;
+    opacity: 1;
+    box-shadow: none;
+    
+}
+#continueButton:hover {
+    background: #ff75a8;
+    
+}
+#envelopeSection {
+    display: none;
+    min-height: 100vh;
+    padding: 35px 15px;
+    text-align: center;
+    background: #fff5f8;
+}
+#envelope {
+    position: relative;
+    width: 280px;
+    max-width: 90%;
+    min-height: 180px;
+    margin: 30px auto;
+    background: #ffc0d9;
+    border: 2px solid #ff8fba;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    box-shadow: 0 8px 25px #ff8fba30;
+}
+#envelopeHeart {
+    color: #ff4f91;
+    font-size: 55px;
+}
+#openLetter {
+    padding: 10px 25px;
+    background: white;
+    color: #ff4f91;
+    border: 2px solid #ff8fba;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#openLetter:hover {
+    background: #ffe8f0;
+}
+
+@keyframes heartBlink {
+    from {
+        opacity: 0.4;
+        text-shadow: 0 0 5px #ffb6d0;
+    }
+    to {
+        opacity: 1;
+        text-shadow: 0 0 20px #ff4f91;
+    }
+}
+#letterPaper {
+    display: none;
+    position: relative;
+    width: 85%;
+    max-width: 420px;
+    margin: 25px auto;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    background-color: #fffdf7;
+    color: #5c4945;
+    border: 1px solid #e8d9cf;
+    outline: 1px solid #e8d9cf;
+    outline-offset: -7px;
+    box-shadow: 0 5px 18px rgba(80, 55, 45, 0.12);
+    text-align: left;
+    line-height: 1.8;
+}
+/* Tiny minimalist corner decorations */
+#letterPaper::before {
+    content: "♡";
+    position: absolute;
+    top: 13px;
+    left: 16px;
+    color: #c99b9b;
+    font-size: 17px;
+}
+#letterPaper::after {
+    content: "♡";
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    color: #c99b9b;
+    font-size: 17px;
+}
+/* Letter heading */
+#letterPaper h2 {
+    color: #9d7373;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 18px;
+}
+/* Small date/title */
+.letterDate {
+    text-align: center;
+    color: #b28b85;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+/* Letter paragraphs */
+.letterBody {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+/* Letter ending */
+.letterEnding {
+    text-align: right;
+    color: #9d7373;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    margin-top: 25px;
+}
+@keyframes welcomeFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 400px) {
+    #login h1,
+    #welcome h1 {
+        font-size: 26px;
+    }
+    #letterPaper {
+        padding: 25px 20px;
+    }
+    #loveHeart p {
+        font-size: 9px;
+    }
+}
